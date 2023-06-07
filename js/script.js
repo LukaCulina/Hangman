@@ -117,11 +117,11 @@ function randomWord() {
     //initialDrawing would draw the frame
     initialDrawing();
 } 
+
 randomWord();
 
-
-
 function initGame(e) {
+    e.target.value = e.target.value.toLowerCase();
     let key = e.target.value;
     if(key.match(/^[A-Za-z]+$/) && !incorrects.includes(`${key}`) && !corrects.includes(`${key}`)){
         if(word.includes(key)){
